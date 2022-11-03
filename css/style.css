@@ -1,0 +1,55 @@
+.container {
+  padding: 30px;
+  margin: 50px;
+  border: 1px rgb(220, 239, 239) solid;
+  border-radius: 20px;
+  box-shadow: 10px 10px 28px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(-225deg, #e3fdf5 0%, #ffe6fa 100%);
+}
+
+.card {
+  text-align: center;
+  font-size: 11px;
+  font-style: italic;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+}
+.days {
+  margin: 10px auto;
+  display: block;
+}
+
+.citySearch:hover {
+  text-decoration: underline;
+}
+
+.degree {
+  font-size: 22px;
+  font-weight: bold;
+  font-style: normal;
+}
+
+#buttonSearch {
+  background-color: #e8faf8;
+  font-style: italic;
+  font-weight: bold;
+  border: 1px rgb(220, 239, 239) solid;
+  box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+#buttonSearch:hover {
+  background-color: #fccfff;
+}
+
+#search {
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+  border: 1px rgb(220, 239, 239) solid;
+}
+
+#week {
+  color: pink;
+}
+
+.citySearch {
+  font-size: 13px;
+  opacity: 60%;
+}
