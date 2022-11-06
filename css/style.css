@@ -53,3 +53,8 @@
   font-size: 13px;
   opacity: 60%;
 }
+
+footer {
+  text-align: center;
+  font-family: monospace;
+}
