@@ -21,139 +21,146 @@
   </head>
   <body>
     <div class="container">
-      <div class="row">
-        <div class="col-2"></div>
-        <div class="col-3">
-          <div class="card">
-            <div class="card-body">
-              <span class="degree" id="currentCity">Kyiv</span> <br />
-              <p class="currentDay"></p>
-              <br />
-              <p class="currentTime"></p>
-              <br />
-              <span class="degree" id="currentDeg">15°</span>
+      <div class="weather-app">
+        <div class="row">
+          <div class="col-2"></div>
+          <div class="col-3">
+            <div class="card">
+              <div class="card-body">
+                <span class="degree" id="currentCity"></span> <br />
+                <p class="currentDay"></p>
+                <p class="currentTime"></p>
+                <p>Wind: <span id="currentWind"></span> km/h</p>
+                <p>Humidity: <span id="currentHumidity"></span>%</p>
+                <p id="currentWeather"></p>
+                <span class="degree" id="currentDeg"></span
+                ><span class="units"
+                  ><a href="#" id="celsius-link" class="active">°C</a> |<a
+                    href="#"
+                    id="fahrenheit-link">
+                    °F</a
+                  ></span
+                >
+              </div>
             </div>
           </div>
+          <div class="col-2"></div>
+          <div class="col-5">
+            <img
+              src="http://openweathermap.org/img/wn/02d@2x.png"
+              alt="Weather now"
+              width="150px"
+              id="icon" />
+          </div>
         </div>
-        <div class="col-2"></div>
-        <div class="col-5">
-          <img
-            src="images/clouds-sun.png"
-            class="img-fluid"
-            alt="Weather now"
-            width="150px" />
-        </div>
-      </div>
-      <br />
+        <br />
 
-      <form id="city-search">
-        <div class="form-group row">
+        <form id="city-search">
+          <div class="form-group row">
+            <div class="col-1"></div>
+            <div class="col-8">
+              <input
+                type="search"
+                class="form-control"
+                id="search-current-city"
+                name="search"
+                placeholder="Type a city"
+                autofocus="on" />
+              <div id="citySearch" class="form-text"></div>
+            </div>
+            <div class="col-2">
+              <input
+                type="submit"
+                class="form-control"
+                id="buttonSearch"
+                name="buttonSearch"
+                value="Search" />
+            </div>
+          </div>
+        </form>
+        <br />
+        <div class="row">
           <div class="col-1"></div>
-          <div class="col-8">
-            <input
-              type="search"
-              class="form-control"
-              id="search-current-city"
-              name="search"
-              placeholder="Type a city"
-              autofocus="on" />
-            <div id="citySearch" class="form-text">
-              <span class="citySearch">Zaporizhzhya </span>
-
-              <span class="citySearch">Mykolayiv</span>
-              <span class="citySearch">Donetsk</span>
-              <span class="citySearch">Luhansk</span>
-              <span class="citySearch">Kherson</span>
+          <div class="col-2">
+            <div class="card">
+              <img
+                src="images/clouds.png"
+                alt="Sunday"
+                width="50px"
+                class="days" />
+              <div class="card-body">
+                <p class="card-text">
+                  <span class="degree">16° </span><br />
+                  Sunday <br />
+                  09/10
+                </p>
+              </div>
             </div>
           </div>
           <div class="col-2">
-            <input
-              type="submit"
-              class="form-control"
-              id="buttonSearch"
-              name="buttonSearch"
-              value="Search" />
-          </div>
-        </div>
-      </form>
-      <br />
-      <div class="row">
-        <div class="col-1"></div>
-        <div class="col-2">
-          <div class="card">
-            <img
-              src="images/clouds.png"
-              alt="Sunday"
-              width="50px"
-              class="days" />
-            <div class="card-body">
-              <p class="card-text">
-                <span class="degree">16° </span><br />
-                Sunday <br />
-                09/10
-              </p>
+            <div class="card">
+              <img
+                src="images/sun.png"
+                alt="Monday"
+                width="50px"
+                class="days" />
+              <div class="card-body">
+                <p class="card-text">
+                  <span class="degree">21°</span> <br />
+                  Monday <br />
+                  10/10
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-2">
-          <div class="card">
-            <img src="images/sun.png" alt="Monday" width="50px" class="days" />
-            <div class="card-body">
-              <p class="card-text">
-                <span class="degree">21°</span> <br />
-                Monday <br />
-                10/10
-              </p>
+          <div class="col-2">
+            <div class="card">
+              <img
+                src="images/clouds-sun.png"
+                alt="Tuesday"
+                width="50px"
+                class="days" />
+              <div class="card-body">
+                <p class="card-text">
+                  <span class="degree">19°</span> <br />
+                  Tuesday <br />11/10
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-2">
-          <div class="card">
-            <img
-              src="images/clouds-sun.png"
-              alt="Tuesday"
-              width="50px"
-              class="days" />
-            <div class="card-body">
-              <p class="card-text">
-                <span class="degree">19°</span> <br />
-                Tuesday <br />11/10
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-2">
-          <div class="card">
-            <img
-              src="images/sun.png"
-              alt="Wednesday"
-              width="50px"
-              class="days" />
+          <div class="col-2">
+            <div class="card">
+              <img
+                src="images/sun.png"
+                alt="Wednesday"
+                width="50px"
+                class="days" />
 
-            <div class="card-body">
-              <p class="card-text">
-                <span class="degree">18°</span><br />
-                Wednesday <br />
-                12/10
-              </p>
+              <div class="card-body">
+                <p class="card-text">
+                  <span class="degree">18°</span><br />
+                  Wednesday <br />
+                  12/10
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-2">
-          <div class="card">
-            <img
-              src="images/rain.png"
-              alt="Thursday"
-              width="55px"
-              class="days" />
-            <div class="card-body">
-              <p class="card-text">
-                <span class="degree">14°</span> <br />
-                Thursday <br />13/10
-              </p>
+          <div class="col-2">
+            <div class="card">
+              <img
+                src="images/rain.png"
+                alt="Thursday"
+                width="55px"
+                class="days" />
+              <div class="card-body">
+                <p class="card-text">
+                  <span class="degree">14°</span> <br />
+                  Thursday <br />13/10
+                </p>
+              </div>
             </div>
+            <div class="col-1"></div>
           </div>
-          <div class="col-1"></div>
         </div>
       </div>
     </div>

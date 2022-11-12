@@ -1,10 +1,11 @@
-.container {
+.weather-app {
   padding: 30px;
-  margin: 50px;
+  margin: 50px auto;
   border: 1px rgb(220, 239, 239) solid;
   border-radius: 20px;
   box-shadow: 10px 10px 28px rgba(0, 0, 0, 0.1);
   background: linear-gradient(-225deg, #e3fdf5 0%, #ffe6fa 100%);
+  max-width: 770px;
 }
 
 .card {
@@ -66,5 +67,30 @@ footer {
 
 .currentTime {
   font-size: 16px;
-  margin-bottom: -2px;
+}
+
+p::first-letter {
+  text-transform: capitalize;
+}
+
+.units {
+  position: relative;
+  top: -8px;
+}
+
+.active {
+  color: black;
+  cursor: default;
+}
+
+.active:hover {
+  text-decoration: none;
+}
+
+#fahrenheit-link {
+  text-decoration: none;
+}
+
+#celsius-link {
+  text-decoration: none;
 }

@@ -1,3 +1,30 @@
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#currentDeg");
+  //remove the active link from the celsius
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function displayCelsiusTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#currentDeg");
+  //remove the active link from the fahrenheit
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
+
+let celsiusTemperature = null;
+
 function searchCity(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#search-current-city");
@@ -9,10 +36,23 @@ let form = document.querySelector("#city-search");
 form.addEventListener("submit", searchCity);
 
 function displayWeatherCondition(response) {
+  celsiusTemperature = response.data.main.temp;
   document.querySelector("#currentCity").innerHTML = response.data.name;
-  document.querySelector("#currentDeg").innerHTML = `${Math.round(
-    response.data.main.temp
-  )}°C`;
+  document.querySelector("#currentDeg").innerHTML =
+    Math.round(celsiusTemperature);
+
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
+  let windElement = document.querySelector("#currentWind");
+  windElement.innerHTML = Math.round(response.data.wind.speed);
+  let humidityElement = document.querySelector("#currentHumidity");
+  humidityElement.innerHTML = response.data.main.humidity;
+  let descriptionElement = document.querySelector("#currentWeather");
+  descriptionElement.innerHTML = response.data.weather[0].description;
 }
 
 function currentCity(city) {
