@@ -27,13 +27,14 @@
           <div class="col-3">
             <div class="card">
               <div class="card-body">
-                <span class="degree" id="currentCity"></span> <br />
-                <p class="currentDay"></p>
+                <span class="degree" id="city"></span> <br />
+                <p class="date"></p>
                 <p class="currentTime"></p>
-                <p>Wind: <span id="currentWind"></span> km/h</p>
-                <p>Humidity: <span id="currentHumidity"></span>%</p>
-                <p id="currentWeather"></p>
-                <span class="degree" id="currentDeg"></span
+                <p>Wind: <span id="wind"></span> m/h</p>
+                <p>Humidity: <span id="humidity"></span>%</p>
+                <p id="description"></p>
+                <p>Last updated: <span id="date"></span></p>
+                <span class="degree" id="temperature"></span
                 ><span class="units"
                   ><a href="#" id="celsius-link" class="active">°C</a> |<a
                     href="#"
@@ -54,15 +55,14 @@
           </div>
         </div>
         <br />
-
-        <form id="city-search">
+        <form id="search-form">
           <div class="form-group row">
             <div class="col-1"></div>
             <div class="col-8">
               <input
                 type="search"
                 class="form-control"
-                id="search-current-city"
+                id="city-input"
                 name="search"
                 placeholder="Type a city"
                 autofocus="on" />
@@ -79,94 +79,12 @@
           </div>
         </form>
         <br />
-        <div class="row">
-          <div class="col-1"></div>
-          <div class="col-2">
-            <div class="card">
-              <img
-                src="images/clouds.png"
-                alt="Sunday"
-                width="50px"
-                class="days" />
-              <div class="card-body">
-                <p class="card-text">
-                  <span class="degree">16° </span><br />
-                  Sunday <br />
-                  09/10
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-2">
-            <div class="card">
-              <img
-                src="images/sun.png"
-                alt="Monday"
-                width="50px"
-                class="days" />
-              <div class="card-body">
-                <p class="card-text">
-                  <span class="degree">21°</span> <br />
-                  Monday <br />
-                  10/10
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-2">
-            <div class="card">
-              <img
-                src="images/clouds-sun.png"
-                alt="Tuesday"
-                width="50px"
-                class="days" />
-              <div class="card-body">
-                <p class="card-text">
-                  <span class="degree">19°</span> <br />
-                  Tuesday <br />11/10
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-2">
-            <div class="card">
-              <img
-                src="images/sun.png"
-                alt="Wednesday"
-                width="50px"
-                class="days" />
-
-              <div class="card-body">
-                <p class="card-text">
-                  <span class="degree">18°</span><br />
-                  Wednesday <br />
-                  12/10
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-2">
-            <div class="card">
-              <img
-                src="images/rain.png"
-                alt="Thursday"
-                width="55px"
-                class="days" />
-              <div class="card-body">
-                <p class="card-text">
-                  <span class="degree">14°</span> <br />
-                  Thursday <br />13/10
-                </p>
-              </div>
-            </div>
-            <div class="col-1"></div>
-          </div>
-        </div>
+        <div class="weather-forecast" id="forecast"></div>
       </div>
     </div>
     <footer>
-      <a href="https://github.com/malina813/weather-app">Open-source code</a> by
-      Alina Olkhovych
+      <a href="https://github.com/malina813/weather-app">Open-source code</a>
+      by Alina Olkhovych
     </footer>
     <script src="js/javascript.js"></script>
   </body>
