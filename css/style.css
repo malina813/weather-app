@@ -13,7 +13,21 @@
   font-size: 11px;
   font-style: italic;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+  border: 1px rgb(220, 239, 239) solid;
+  border-radius: 20px;
 }
+
+#card-body {
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+  border: 1px rgb(220, 239, 239) solid;
+  border-radius: 20px;
+}
+
+#city-input {
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+  border: 1px rgb(220, 239, 239) solid;
+}
+
 .days {
   margin: 10px auto;
   display: block;
@@ -39,7 +53,6 @@
 
 #buttonSearch {
   background-color: #e8faf8;
-  font-style: italic;
   font-weight: bold;
   border: 1px rgb(220, 239, 239) solid;
   box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.1);
@@ -86,19 +99,31 @@ p::first-letter {
   top: -8px;
 }
 
-.active {
-  color: black;
-  cursor: default;
-}
-
-.active:hover {
-  text-decoration: none;
-}
-
 #fahrenheit-link {
   text-decoration: none;
 }
 
 #celsius-link {
   text-decoration: none;
+}
+
+#daysForecast {
+  text-align: center;
+  font-size: 11px;
+  font-style: italic;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: white;
+  margin: 12px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+#icon {
+  background-color: white;
+  border: 1px rgb(220, 239, 239) solid;
+  border-radius: 20px;
+  box-shadow: 10px 10px 28px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
+  margin-right: 50px;
 }
